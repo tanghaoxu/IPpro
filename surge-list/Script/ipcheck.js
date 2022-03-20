@@ -19,10 +19,19 @@ $httpClient.get(url, function(error, response, data){
     let city = jsonData.city
     let isp = jsonData.isp
   body = {
-    title:"节点相关信息",
+    title: "节点相关信息",
     content: `IP位置: ${emoji}${country} - ${city}\n运营商: ${isp}`,
-    icon:"bonjour",
-    icon-color': "#99FFFF",
+    icon: "bonjour"
+    icon-color': "#99FFFF"
   }
   $done(body);
 });
+
+
+function getFlagEmoji(countryCode) {
+    const codePoints = countryCode
+      .toUpperCase()
+      .split('')
+      .map(char =>  127397 + char.charCodeAt());
+    return String.fromCodePoint(...codePoints);
+}
