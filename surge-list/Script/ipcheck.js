@@ -10,8 +10,7 @@ $httpClient.get(url, function(error, response, data){
   body = {
     title: "节点信息",
     content: `IP: ${ip}\nISP: ${isp}\n位置: ${emoji}${country} - ${city}`,
-    icon: "bonjour",
-    'icon-color': '#CCFFFF',
+    icon: "bonjour", 'icon-color': '#CCFFFF',
   }
   $done(body);
 });
