@@ -21,8 +21,8 @@ $httpClient.get(url, function(error, response, data){
   body = {
     title: "Surge节点IP",
     content: `IP位置: ${emoji}${country} - ${city}\n运营商: ${isp}`,
-    icon: "bonjour"
-    'icon-color': "#99FFFF",
+    icon:"bonjour",
+    icon-color': "#99FFFF",
 
   }
   $done(body);
